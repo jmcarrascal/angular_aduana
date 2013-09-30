@@ -1,0 +1,72 @@
+			label.valid {
+				width: 24px;
+				height: 24px;
+				background: url(assets/img/valid.png) center center no-repeat;
+				display: inline-block;
+				text-indent: -9999px;
+			}
+			label.error {
+				font-weight: bold;
+				color: red;
+				padding: 2px 8px;
+				margin-top: 2px;
+			}
+			.login-wrapper .box {
+				background: none repeat scroll 0 0 #FFFFFF;
+				border-radius: 6px 6px 6px 6px;
+				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 1px rgba(0, 0, 0, 0.35);
+				float: none;
+				margin: 0 auto;
+				padding: 30px 0;
+				width: 750px;
+			}
+			.login-wrapper {
+				text-align: left;
+			}
+			.wizard-steps li {
+				display: block;
+				float: left;
+				max-width: 25%;
+				min-width: 20%;
+				text-align: center;
+			}
+			.wizard-steps {
+				display: block;
+				left: -40px;
+				list-style: none outside none;
+				margin: 0;
+				padding: 0;
+				position: relative;
+				width: 100%;
+			}
+			#fuelux-wizard {
+				margin-top: 0;
+			}
+			.step-content {
+				margin-left: 0;
+				margin-top: 20px;
+			}
+			.wizard-actions {
+    float: right;
+    margin-right: 0;
+    margin-top: 30px;
+}
+p{
+	text-align:justify;
+}
+#pad-wrapper h4 {
+    color: #696D73;
+    font-style: italic;
+    margin: 0;
+    margin-bottom:15px;
+}
+.login-wrapper .box input[type="text"], .login-wrapper .box input[type="password"] {
+    border-color: #B2BFC7;
+    font-size: 15px;
+    height: 30px;
+    margin-bottom: 10px;
+    padding-left: 12px;
+}
+.form-wrapper.payment-info label {
+    width: 100%px;
+}

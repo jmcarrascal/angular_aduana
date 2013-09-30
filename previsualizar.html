@@ -1,0 +1,137 @@
+<html lang="es" ng-app="app">
+	<head>
+		<meta charset="utf-8">
+		<link href="css/estilos.css" rel="stylesheet" media="screen">
+
+		<!-- bootstrap -->
+		<link href="src/css/bootstrap/bootstrap.css" rel="stylesheet">
+		<link href="src/css/bootstrap/bootstrap-responsive.css" rel="stylesheet">
+		<link href="src/css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet">
+
+		<!-- global styles -->
+		<link rel="stylesheet" type="text/css" href="src/css/layout.css">
+		<link rel="stylesheet" type="text/css" href="src/css/elements.css">
+		<link rel="stylesheet" type="text/css" href="src/css/icons.css">
+		<link rel="stylesheet" type="text/css" href="src/css/index.css">
+		<link rel="stylesheet" type="text/css" href="src/css/style.min.css">
+		<link rel="stylesheet" type="text/css" href="src/css/style-responsive.min.css">
+		<!-- libraries -->
+		<!-- this page specific styles -->
+		<link rel="stylesheet" href="src/css/compiled/new-user.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="src/css/compiled/form-showcase.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="src/css/compiled/user-list.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="src/css/compiled/user-profile.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="src/css/compiled/ui-elements.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="src/css/font-awesome.css" type="text/css" media="screen" />
+
+		<link rel="stylesheet" href="src/css/themes/smoothness/jquery-ui.css" />
+		<link rel="stylesheet" href="src/css/style.css" />
+
+		<script src="src/js/properties.js"></script>
+
+		<!-- open sans font -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+		<title>FormBuilder - CNC</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
+
+		<script src="src/app.js"></script>
+		<script src="src/controllers/FormsListController.js"></script>
+		<script src="src/controllers/EditorController.js"></script>
+		<script src="src/controllers/DashboardController.js"></script>
+
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script src="src/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<script type="text/javascript" src="src/js/jquery_ui_custom.js"></script>
+		<script type="text/javascript" src="src/js/functions/custom.js"></script>
+		<script type="text/javascript" src="src/js/plugins/charts/excanvas.min.js"></script>
+		<script type="text/javascript" src="src/js/plugins/charts/jquery.flot.js"></script>
+		<script type="text/javascript" src="src/js/plugins/charts/jquery.flot.resize.js"></script>
+		<script type="text/javascript" src="src/js/plugins/charts/jquery.sparkline.min.js"></script>
+		<script type="text/javascript" src="src/js/plugins/forms/jquery.tagsinput.min.js"></script>
+		<script type="text/javascript" src="src/js/plugins/forms/jquery.inputlimiter.min.js"></script>
+		<script type="text/javascript" src="src/js/plugins/forms/jquery.maskedinput.min.js"></script>
+		<script type="text/javascript" src="src/js/plugins/forms/jquery.autosize.js"></script>
+		<script type="text/javascript" src="src/js/plugins/forms/jquery.ibutton.js"></script>
+		<script type="text/javascript" src="src/js/plugins/forms/jquery.dualListBox.js"></script>
+		<script type="text/javascript" src="src/js/plugins/forms/jquery.validate.js"></script>
+		<script type="text/javascript" src="src/js/plugins/forms/jquery.uniform.min.js"></script>
+		<script type="text/javascript" src="src/js/plugins/forms/jquery.select2.min.js"></script>
+		<script type="text/javascript" src="src/js/plugins/forms/jquery.cleditor.js"></script>
+		<script type="text/javascript" src="src/js/plugins/uploader/plupload.js"></script>
+		<script type="text/javascript" src="src/js/plugins/uploader/plupload.html4.js"></script>
+		<script type="text/javascript" src="src/js/plugins/uploader/plupload.html5.js"></script>
+		<script type="text/javascript" src="src/js/plugins/uploader/jquery.plupload.queue.js"></script>
+		<script type="text/javascript" src="src/js/plugins/wizard/jquery.form.wizard.js"></script>
+		<script type="text/javascript" src="src/js/plugins/wizard/jquery.form.js"></script>
+		<script type="text/javascript" src="src/js/plugins/ui/jquery.collapsible.min.js"></script>
+		<script type="text/javascript" src="src/js/plugins/ui/jquery.timepicker.min.js"></script>
+		<script type="text/javascript" src="src/js/plugins/ui/jquery.jgrowl.min.js"></script>
+		<script type="text/javascript" src="src/js/plugins/ui/jquery.pie.chart.js"></script>
+		<script type="text/javascript" src="src/js/plugins/ui/jquery.fullcalendar.min.js"></script>
+		<script type="text/javascript" src="src/js/plugins/ui/jquery.elfinder.js"></script>
+		<script type="text/javascript" src="src/js/plugins/ui/jquery.fancybox.js"></script>
+		<script type="text/javascript" src="src/js/plugins/tables/jquery.dataTables.min.js"></script>
+
+		<script type="text/javascript" src="src/js/plugins/bootstrap/bootstrap-bootbox.min.js"></script>
+		<script type="text/javascript" src="src/js/plugins/bootstrap/bootstrap-progressbar.js"></script>
+		<script type="text/javascript" src="src/js/plugins/bootstrap/bootstrap-colorpicker.js"></script>
+		<script type="text/javascript" src="src/js/bootstrap.js"></script>
+
+		<script type="text/javascript">
+			function aMays(e, elemento) {
+				tecla = (document.all) ? e.keyCode : e.which;
+				elemento.value = elemento.value.toUpperCase();
+			}
+			
+			$( document ).ready(function() {
+   				 $("#idForm").submit();
+			});
+		</script>
+
+	</head>
+
+	<body>
+
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="container-fluid">
+
+					<a class="brand" href="#"><span>FormBuilder</span></a>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- start: Header -->
+
+		<div class="container-fluid">
+			<div class="row-fluid">
+
+				<!-- start: Main Menu -->
+				<div id="sidebar-left" class="span1">
+					<div class="nav-collapse sidebar-nav">
+						<ul class="nav nav-tabs nav-stacked main-menu">
+
+							<li class="active"  >
+								<a href="#"><i class="icon-eye-open"></i><span class="hidden-tablet"> Previsualizar</span></a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+
+				<!-- end: Content -->
+
+				<form name="form1" action="http://54.232.16.128:8080/FormRender/rest/external/preview2"	method="post" target="iframe" id ="idForm">					
+					
+				</form>
+				
+				<div class="span11" id="content" >
+					<iframe name="iframe" id="iframe"></iframe>										
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

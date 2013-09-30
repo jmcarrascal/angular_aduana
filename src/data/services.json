@@ -1,0 +1,14 @@
+{
+    "services": [
+        {
+            "id": 106,
+            "url": "url",
+            "label": "Provincias"
+        },
+        {
+            "id": 107,
+            "url": "url 1",
+            "label": "Localidades"
+        }
+    ]
+ }
