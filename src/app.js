@@ -26,6 +26,16 @@ angular.module('app', []).
   		  controller: ListOperadorJuridicoController
 	  }).
 	  
+	  when('/opeJuridicoNew', {
+  		  templateUrl: 'src/views/newOperadorJuridico.html',
+  		  controller: NewOperadorJuridicoController
+	  }).
+	  
+	  
+	  when('/getOperadorNatural', {
+  		  templateUrl: 'src/views/listOperadorNatural.html',
+  		  controller: ListOperadorNaturalController
+	  }).
 	  when('/dashboard', {
   		  templateUrl: 'src/views/dashboard.html',
   		  controller: DashboardController
