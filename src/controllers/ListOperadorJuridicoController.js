@@ -1,23 +1,28 @@
 /**
-* LibrosListController
+* ListOperadorJuridicoController
 * Controlador del listado de libros
 */
-function FormsListController($scope, $http, serviceShare) {
+function ListOperadorJuridicoController($scope, $http, serviceShare) {
   
   var oTable = $('#IdTableFormsList').dataTable({
 		"bProcessing" : true,
-		"sAjaxSource" : "http://ec2-54-232-19-233.sa-east-1.compute.amazonaws.com:8080/FormBuilderService/rest" + "/getForms/2220" ,
+		"sAjaxSource" : "http://localhost:8080/Aduana_/rest/usuario/getOperadorJuridicoAll" ,
 		"sAjaxDataProp" : "",
+		
 		"aoColumns" : [{
-			"mData" : "header.name"
-		}, {
-			"mData" : "header.code"
-		}, {
-			"mData" : "header.status"
-		}, {
-			"mData" : "header.version"
-		}, {
-			"mData" : "header.descrip"
+			"mData" : "id" 
+		}, 
+		{
+			"mData" : "nit"
+		}, 
+		{
+			"mData" : "razonSocial"
+		}, 
+		{
+			"mData" : "fechaConstitucion"
+		},
+		{
+			"mData" : "domicilioLegal.barrio.nombre"
 		}
 		]
 	});

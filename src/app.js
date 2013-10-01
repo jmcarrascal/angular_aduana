@@ -17,26 +17,20 @@ angular.module('app', []).
   $routes.
      
   	  when('/login', {
-  		  templateUrl: 'src/views/login.html',
-  		  controller: FormsListController
+  		  templateUrl: 'login.html',
+  		  controller: LoginController
 	  }).
-
-	  when('/forms', {
-		  templateUrl: 'src/views/forms-list.html',
-		  controller: FormsListController
-		  }).
-	  	  
-	  when('/editor/:mode', {
-		  templateUrl: 'src/views/editor.html',
-		  controller: EditorController
-		  }).
-		  
+	  
+	  when('/getOperadorJuridico', {
+  		  templateUrl: 'src/views/listOperadorJuridico.html',
+  		  controller: ListOperadorJuridicoController
+	  }).
+	  
 	  when('/dashboard', {
-		  templateUrl: 'views/dashboard.html',
-		  controller: DashboardController
-		  }).
-	
-	  //cualquier ruta no definida  
+  		  templateUrl: 'src/views/dashboard.html',
+  		  controller: DashboardController
+	  }).
+	 
       otherwise({
 		  redirectTo: '/login'});
 

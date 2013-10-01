@@ -13,16 +13,14 @@
 			<div class="span11" id="content">
 			
 							<div class="box-header">
-	<h2><i class="icon-th-large"></i><span class="break"></span>Lista de Formularios</h2>
+	<h2><i class="icon-th-large"></i><span class="break"></span>Lista de Operadores</h2>
 
 	<ul class="nav pull-right">
 
 		<li class="dropdown ">
 			<a data-toggle="dropdown" class="dropdown-toggle just-caret" href="#"><span class="break"></span><i class="icon-cog"></i></a>
 			<ul class="dropdown-menu pull-right">
-				<li>
-					<a data-toggle="modal" href="#myModal"><i class="icon-pencil"></i> Nuevo formulario</a>
-				</li>
+				
 
 			</ul>
 		</li>
@@ -42,7 +40,6 @@
 							<th class="span2 sortable"><span class="line"></span>Estado</th>
 							<th class="span3 sortable"><span class="line"></span>version </th>
 							<th class="span3 sortable"><span class="line"></span>descrip</th>
-							<th class="span3 sortable" ><span class="line"></span>Accion</th>
 						</tr>
 					</thead>
 
@@ -54,63 +51,7 @@
 		</div>
 	</div>
 
-	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-				&times;
-			</button>
-			<h5 id="myModalLabel">Nuevo formulario</h5>
-		</div>
-		<div class="modal-body" >
-			<form action = "/editForm" id="listForms-Form" method="post" class="form-horizontal">
-				<input id = "idHiddenIdApp" type="hidden" value="{{id_app}}" name="id_app"/>
-				<input id = "idHiddenUrlServices" type="hidden" value="{{url_services}}"/>
-				<input id = "idHiddenMode" type="hidden" value="" name="mode"/>
-				<input id = "idHiddenIdForm" type="hidden" value="" name="idForm"/>
-				<input id = "idHiddenTempCode" type="hidden"/>
-				<input id = "idHiddenTempName" type="hidden"/>
-				<input id = "idHiddenTempDescrip" type="hidden"/>
-
-				<input type="hidden" value="new" name="mode"/>
-				<div class="row-fluid">
-					<div class="control-group">
-						<label class="control-label">C&oacute;digo:</label>
-						<div class="controls">
-							<input id = "idTextCode" type="text" name="code"  class="span10" required onkeyup="aMays(event, this)" onblur="aMays(event, this)"/>
-						</div>
-					</div>
-					<div class="control-group">
-						<label class="control-label">Descripci&oacute;n:</label>
-						<div class="controls">
-							<input id = "idTextDescrip" type="text" name="descrip" class="span10" required/>
-						</div>
-					</div>
-					<div class="control-group">
-						<label class="control-label">Nombre:</label>
-						<div class="controls">
-							<input id = "idTextName" type="text" name="name" class="span10" required/>
-						</div>
-					</div>
-				</div>
-
-			</form>
-			<div class="modal-footer">
-				<button class="btn" data-dismiss="modal">
-					Cerrar
-				</button>
-				<button class="btn btn-primary"  id = "idButtonSave">
-					Guardar
-				</button>
-			</div>
-		</div>
-
+	
 	</div>
 </div>
-</div>
 
-<script>
-	$("#listForms-Form").validate({
-		debug : true
-	});
-
-</script>

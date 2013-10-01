@@ -5,22 +5,28 @@
 function LoginController($scope, $http, serviceShare) {
   		
 	$(document).ready(function() {
-	
-	$("#btn_submit").click(function() {
-		alert('');
-		$.ajax({
-			type : "POST",
-			url : "/operador/validate/user",
-			data : {
-				"value" : "1"
-			},
-			success : function(msg) {
-				
-				console.log(msg);
-				
-			}
-		});
-		
-	});
-	});
+        
+	      
+	      $('#validateUserForm').submit(function(e) {
+	        $.post("http://localhost:8080/Aduana_/rest/usuario/validate", $(this).serialize(), function(response) {
+	        	console.log(response);
+	        	$.each(response, function(i, item) {
+	        		console.log(i + ' ' + item);
+	        		if (i == 'success') {
+						
+						if ( item == true) {
+							
+							window.location = "#/dashboard";
+						}else{
+							alert ("Error de Usuario")
+						} 
+					}
+				});
+	        	
+	        });
+	        
+	        e.preventDefault(); // prevent actual form submit and page reload
+	      });
+	      
+	  });
 }
